@@ -1,9 +1,24 @@
-JACOPO DORIS — V8.7 — ANTEPRIMA EDITORIALE
+JD — V8.8 EDITORIAL SYSTEM
 
-1. Estrai lo ZIP in una cartella.
-2. Apri index.html con un browser.
-3. Le immagini e il video sono inclusi in assets.
-4. La sezione capitoli pubblicati prova a collegarsi al progetto Supabase pubblico e richiede Internet.
-5. Il capitolo Studi sulla luce è ancora in bozza: non comparirà nella sezione pubblica.
-6. JD Studio con login e modifica contenuti non è ancora incluso in questa anteprima.
-7. Nessuna modifica è stata effettuata su jacopodoris.com.
+Questo pacchetto contiene il sito di anteprima e JD Studio.
+
+REGOLA EDITIONS
+- Se non esistono creazioni pubblicate, disponibili e associate a una categoria pubblicata, la voce EDITIONS e l’intera sezione non compaiono.
+- Le categorie vuote non appaiono.
+- JD Studio può gestire categorie e prodotti in bozza, indipendentemente dal sito pubblico.
+- Nessuna borsa o prodotto reale è stato inventato o inserito nel catalogo.
+- Non sono attivi pagamenti, carrello, ordini o e-commerce legale.
+
+CONFIGURAZIONE
+1. Eseguire UNA SOLA VOLTA editions.sql nel progetto Supabase Jacopodoris-portfolio.
+2. Aprire studio.html sull’anteprima HTTPS Netlify o localhost, accedere con le credenziali di Jacopo.
+3. Creare categorie, prodotti e fotografie. Per i capitoli: aggiungere pagine, testi e fotografie dal pannello. Pubblicare solo creazioni reali e disponibili.
+4. Il catalogo compare sul sito pubblico solo dopo aver pubblicato prodotti idonei.
+
+PROTEZIONE
+- La chiave in site-config.js è publishable, non secret.
+- RLS limita le scritture all’UID proprietario.
+- Il bucket jd-public-media è pubblico: non caricare bozze fotografiche riservate su questo bucket.
+- Questa versione va collaudata su un sottodominio separato. Non sostituisce automaticamente jacopodoris.com.
+
+NOTA: foto in bucket pubblico anche se un capitolo è in bozza. Nessun pagamento online. Il sito richiede Internet per Supabase e per la libreria CDN.
