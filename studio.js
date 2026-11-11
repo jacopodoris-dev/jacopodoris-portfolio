@@ -9,6 +9,7 @@
  const option=(id,name)=>{const x=document.createElement('option');x.value=id;x.textContent=name;return x};
  async function open(){const {data:{user}}=await db.auth.getUser();const allowed=user?.id===owner;$('login').hidden=allowed;$('dashboard').hidden=!allowed;$('logout').hidden=!allowed;if(allowed)await refresh();else if(user)say('Questo account non è abilitato alla gestione editoriale.',true)}
  $('loginForm').onsubmit=async e=>{e.preventDefault();say('Accesso in corso…',true);const {error}=await db.auth.signInWithPassword({email:$('email').value,password:$('password').value});if(error){say(error.message,true);return}await open()};
+ $('forgotPassword').onclick=async e=>{e.preventDefault();const email=$('email').value.trim();if(!email){say('Inserisci il tuo indirizzo email.',true);return}say('Invio della richiesta…',true);const redirectTo=new URL('reset-password.html',location.href).href;const {error}=await db.auth.resetPasswordForEmail(email,{redirectTo});say(error?'Errore: '+error.message:'Se l’account è registrato, arriverà una nuova email di recupero. Usa solo il collegamento più recente.',true)};
  $('logout').onclick=async()=>{await db.auth.signOut();await open()};
  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));for(const name of ['chapters','editions'])$(name).hidden=name!==b.dataset.tab});
  async function refresh(){await Promise.all([refreshChapters(),refreshEditions(),refreshMedia()])}

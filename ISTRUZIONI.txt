@@ -1,0 +1,12 @@
+JD STUDIO V8.8.1 — Recupero password
+
+Carica sul repository GitHub jacopodoris-portfolio i tre file:
+- studio.html (sostituisce il precedente)
+- studio.js (sostituisce il precedente)
+- reset-password.html (nuovo)
+
+Non cancellare gli altri file, soprattutto site-config.js e studio.css.
+Dopo il deploy verifica /reset-password.html.
+Poi apri /studio.html e usa Password dimenticata? per richiedere una nuova email.
+Supabase URL Configuration deve includere https://preeminent-marshmallow-1b6c50.netlify.app/** e Site URL dell’anteprima.
+Non incollare password in chat.
