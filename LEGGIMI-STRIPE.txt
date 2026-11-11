@@ -1,0 +1,27 @@
+JD | EDITIONS — V8.9.6 — STRIPE CHECKOUT IN MODALITÀ TEST
+
+1) Su GitHub caricare nella radice:
+   index.html
+   stripe-checkout-v8-9-6.js
+   checkout-result.html
+   e la cartella netlify/functions/create-checkout.mjs mantenendo il percorso.
+   NON cancellare gli altri file. Non sono richieste modifiche SQL.
+
+2) Netlify > Project configuration > Environment variables:
+   STRIPE_SECRET_KEY          = sk_test_... (da Stripe Dashboard TEST)
+   STRIPE_SHIPPING_RATE_ID    = shr_... (tariffa fissa di spedizione TEST creata in Stripe)
+   JD_CHECKOUT_ORIGIN         = https://preeminent-marshmallow-1b6c50.netlify.app
+   JD_SUPABASE_URL           = https://gyfufgvtyhxoxkwezgye.supabase.co
+   JD_SUPABASE_PUBLIC_KEY    = chiave publishable/anon che gia' compare in site-config.js
+   Impostare scope Functions o All scopes. Redeploy dopo la modifica.
+   Non inviare mai sk_test_ in chat. Non inserire sk_test_ in GitHub.
+
+3) TEST: Aprire Editions, aggiungere la borsa e cliccare Continua su Stripe TEST.
+   Il backend verifica prezzo e disponibilita' attuali in Supabase.
+   Stripe raccoglie indirizzo di spedizione in Italia, telefono e tariffa da Stripe.
+   Le chiavi sk_live_ sono rifiutate deliberatamente per sicurezza.
+
+IMPORTANTE: questo pacchetto serve a collaudare la pagina Checkout Stripe.
+Non e' una messa in produzione: mancano webhook verificato, registro ordini,
+aggiornamento atomico del magazzino, comunicazioni di conferma e politiche
+commerciali. Non usare in modalita' live. Il redirect non e' prova di pagamento.
