@@ -1,0 +1,11 @@
+JACOPO DORIS — V8.9.2 IT/EN CONTENUTI SUPABASE
+
+1. Prima di caricare i file su GitHub: apri Supabase SQL Editor e esegui migrazione-v8-9-2.sql UNA SOLA VOLTA.
+   È una migrazione additiva: non cancella dati. Dopo il completamento, verifica che non vi siano errori.
+2. Nel repository GitHub di sviluppo jacopodoris-portfolio, carica tutti i file HTML/JS/CSS presenti nello ZIP nella radice, mantenendo quelli non presenti nell'archivio (assets, studio.css, style.css, site-config.js, ecc.).
+   Il file .sql e questo LEGGIMI possono rimanere locali; non sono necessari sul sito pubblico.
+3. Dopo deploy Netlify, apri studio.html, accedi, premi IT / EN, seleziona capitolo, blocco, categoria o prodotto e salva la versione inglese.
+4. Sul sito di prova clicca EN. Se la traduzione è vuota, compare l'italiano; NON viene effettuata alcuna traduzione automatica.
+5. Non modificare jacopodoris.com. Nessuna chiave segreta è contenuta nei file.
+
+Nota: il checkout del carrello resta dimostrativo e non accetta ordini o pagamenti.

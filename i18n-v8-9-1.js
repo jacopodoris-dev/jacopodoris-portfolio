@@ -66,7 +66,7 @@
  }
  let scheduled=false;
  function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;renderFixed()})}
- document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{lang=langOf(button.dataset.lang);try{localStorage.setItem('jd-language',lang)}catch{}renderFixed()}));
+ document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{lang=langOf(button.dataset.lang);try{localStorage.setItem('jd-language',lang)}catch{}renderFixed();window.dispatchEvent(new CustomEvent('jd:languagechange',{detail:{language:lang}}))}));
  const obs=new MutationObserver(schedule);obs.observe(document.body,{subtree:true,childList:true,characterData:true});
  renderFixed();
 })();
