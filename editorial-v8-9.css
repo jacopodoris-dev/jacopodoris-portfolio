@@ -1,0 +1,44 @@
+/* JD / V8.9 — Editorial book & Editions cart enhancements */
+.live-section{background:#eeede8;padding:clamp(65px,8vw,120px) clamp(18px,4vw,78px)}
+.live-section .section-header{align-items:end;margin-bottom:clamp(40px,7vw,96px)}
+.live-section .section-header h2{font-size:clamp(56px,8vw,120px);line-height:.95}
+#publishedChapters{max-width:1600px;margin:auto}
+.published-card{border:0;margin:85px 0 150px;padding:0;counter-reset:bookpage}
+.published-card>.eyebrow{border-top:1px solid #c9c7c1;padding:20px 0 36px}
+.published-card>h3{font-size:clamp(48px,8vw,125px);font-weight:300;max-width:1000px;margin:0 0 20px;line-height:1.02}
+.published-card>p{max-width:680px;font-size:clamp(19px,2vw,27px);line-height:1.5;margin-bottom:65px}
+.published-card .public-page{max-width:none!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(0px,2vw,28px);align-items:stretch;background:#faf9f6;margin:0 0 clamp(32px,6vw,85px);padding:clamp(22px,3.2vw,55px);border:1px solid #ddd9d2;min-height:clamp(460px,48vw,760px);position:relative;box-shadow:0 20px 45px rgba(0,0,0,.045)}
+.published-card .public-page::after{counter-increment:bookpage;content:'JD / ' counter(bookpage,decimal-leading-zero);position:absolute;bottom:13px;right:clamp(22px,3.2vw,55px);font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.18em;color:#777c79}
+.published-card .public-page>.public-block{min-width:0;margin:0;display:flex;flex-direction:column;justify-content:center}
+.published-card .public-page>.public-block:has(img){justify-content:center}
+.published-card .public-page figure.public-block{margin:0;min-height:300px}
+.published-card .public-page figure.public-block img{width:100%;height:100%;max-height:690px;object-fit:contain;display:block;background:#efefeb}
+.published-card .public-page figcaption{margin-top:12px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#747874}
+.published-card .public-page .public-block p{width:100%;max-width:54ch;font-size:clamp(17px,1.45vw,23px);line-height:1.8;letter-spacing:0;white-space:pre-wrap;text-align:justify;text-justify:inter-word;hyphens:auto;margin:0 0 20px auto;color:#252726}
+.published-card .public-page .public-block blockquote{font-size:clamp(28px,3vw,52px);line-height:1.16;margin:0;letter-spacing:-.04em}
+/* Full-photo page */
+.published-card .public-page[data-layout="full"]{display:flex!important;flex-direction:column;min-height:auto;padding:clamp(12px,2vw,30px)}
+.published-card .public-page[data-layout="full"]>figure.public-block{width:100%}
+.published-card .public-page[data-layout="full"] img{width:100%;max-height:85vh;object-fit:contain}
+/* Text-only layout: deliberately a single reading column aligned to the right */
+.published-card .public-page.is-text-only>.public-block{grid-column:2}
+/* Photo-only layout: distribute imagery across the book spread */
+.published-card .public-page.is-image-only:has(>.public-block:only-child)>figure.public-block{grid-column:1/-1}
+.published-card .public-page.is-image-only:has(>.public-block:only-child)>figure.public-block img{max-height:76vh}
+.published-card .public-page[data-layout="text-image"]{gap:clamp(16px,4vw,75px)}
+.published-card .public-page[data-layout="text-image"]>.public-block:has(p){grid-column:2;grid-row:1}
+.published-card .public-page[data-layout="text-image"]>.public-block:has(img){grid-column:1;grid-row:1}
+/* Editions product text gets readable line length */
+.edition-product p{font-size:clamp(15px,1.2vw,19px)!important;line-height:1.7;text-align:justify;hyphens:auto;max-width:56ch!important}
+.edition-product{min-width:0}.edition-product img{aspect-ratio:4/5!important}
+.jd-cart-trigger{border:1px solid #333;background:transparent;color:#1a1a1a;padding:13px 20px;margin:18px 0;font:12px 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase;cursor:pointer}
+.jd-cart-trigger:hover{background:#181b1a;color:white}.jd-cart-trigger:disabled{opacity:.4;cursor:not-allowed}
+.jd-cart-top{position:fixed;right:16px;bottom:20px;z-index:100;background:#1b1d1c;color:#fff;padding:15px 20px;border:1px solid #777;box-shadow:0 8px 24px #0003;cursor:pointer;font-size:13px;letter-spacing:.08em}
+.jd-cart-drawer[hidden],.jd-cart-overlay[hidden]{display:none!important}.jd-cart-overlay{position:fixed;inset:0;background:#0009;z-index:101}
+.jd-cart-drawer{position:fixed;right:0;top:0;bottom:0;width:min(520px,100vw);z-index:102;background:#f6f5f0;box-shadow:-5px 0 36px #0002;display:flex;flex-direction:column;padding:30px clamp(20px,4vw,42px);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1d1f1e}
+.jd-cart-drawer header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #bbb;padding-bottom:22px;gap:20px}.jd-cart-drawer h2{font-size:42px;letter-spacing:-.06em;margin:0;font-weight:300}
+.jd-cart-close,.jd-cart-small-btn{border:1px solid #aaa;background:transparent;padding:7px 11px;color:#202020;cursor:pointer;font-size:13px}
+.jd-cart-list{flex:1;overflow:auto;padding:20px 0}.jd-cart-item{border-bottom:1px solid #d3d0cb;padding:17px 0;display:grid;grid-template-columns:68px 1fr;gap:18px}.jd-cart-item img{width:68px;height:85px;object-fit:cover}.jd-cart-item strong{font-weight:500;font-size:15px}.jd-cart-item p{font-size:12px;color:#555;margin:8px 0}.jd-cart-item button{margin-right:6px}
+.jd-cart-footer{border-top:1px solid #bbb;padding-top:20px}.jd-cart-total{display:flex;justify-content:space-between;font-size:20px;margin-bottom:15px}.jd-cart-note{font-size:12px;color:#5c635e;line-height:1.6}.jd-cart-checkout{display:block;width:100%;padding:16px;border:0;background:#aaa;color:#fff;text-align:center;cursor:not-allowed}
+@media(max-width:800px){.published-card .public-page{grid-template-columns:1fr!important;min-height:auto;gap:28px;padding:24px 18px 50px}.published-card .public-page.is-text-only>.public-block,.published-card .public-page[data-layout="text-image"]>.public-block:has(p),.published-card .public-page[data-layout="text-image"]>.public-block:has(img){grid-column:auto;grid-row:auto}.published-card .public-page.is-image-only:has(>.public-block:only-child)>figure.public-block{grid-column:auto}.published-card .public-page .public-block p{margin-left:0;font-size:18px;max-width:65ch;text-align:left}.published-card .public-page figure.public-block{min-height:auto}.published-card .public-page figure.public-block img{height:auto;max-height:80vh}.published-card .public-page::after{right:18px}.live-section{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){.jd-cart-drawer *{scroll-behavior:auto}}
