@@ -1,0 +1,9 @@
+JACOPO DORIS — V8.7 — ANTEPRIMA EDITORIALE
+
+1. Estrai lo ZIP in una cartella.
+2. Apri index.html con un browser.
+3. Le immagini e il video sono inclusi in assets.
+4. La sezione capitoli pubblicati prova a collegarsi al progetto Supabase pubblico e richiede Internet.
+5. Il capitolo Studi sulla luce è ancora in bozza: non comparirà nella sezione pubblica.
+6. JD Studio con login e modifica contenuti non è ancora incluso in questa anteprima.
+7. Nessuna modifica è stata effettuata su jacopodoris.com.
