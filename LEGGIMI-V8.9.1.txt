@@ -1,0 +1,7 @@
+JD Portfolio V8.9.1 — Bilingue IT / EN
+
+Caricare nella root del repository GitHub i file: index.html, editorial-v8-9.css, editorial-v8-9.js, i18n-v8-9-1.css, i18n-v8-9-1.js. Gli altri file (style.css, public.js, studio, assets) rimangono invariati.
+
+Lingua italiana predefinita; scelta EN memorizzata nel browser. Traduzione inglese predisposta per i testi statici dell’anteprima e per i comandi del carrello. Titoli, testi e descrizioni di capitoli e prodotti inseriti da Jacopo nel database restano nella lingua originale, SENZA traduzione automatica: non dichiarare la versione EN completa finché non implementiamo campi tradotti e editor bilingue, con approvazione delle traduzioni.
+
+La V8.9.1 non aggiunge ordini o pagamenti e non modifica il database. Sito di prova, non jacopodoris.com.
