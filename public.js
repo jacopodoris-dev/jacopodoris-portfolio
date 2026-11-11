@@ -79,7 +79,7 @@
         const h=element('h3','edition-category-name',localized(cat,'name'));wrapper.append(h);
         const grid=element('div','edition-grid');
         for(const product of prods){
-          const article=element('article','edition-product');
+          const article=element('article','edition-product');article.dataset.productId=product.id;
           if(product.cover_image&&(/^(https:\/\/|assets\/)/.test(product.cover_image))){
             const fig=image(product.cover_image,localized(product,'title'));
             if(fig)article.append(fig);

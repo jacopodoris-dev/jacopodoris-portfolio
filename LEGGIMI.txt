@@ -1,13 +1,5 @@
-JD / V8.9.4 — testi puliti e impaginazione giustificata
+JACOPO DORIS / V8.9.5 - CARRELLO
 
-Carica su GitHub nella radice del repository TUTTI i 5 file:
-index.html
-i18n-v8-9-1.js
-public.js
-editorial-v8-9.js
-jd-editorial-clean-v8-9-4.css
-
-I primi quattro SOSTITUISCONO gli omonimi, il CSS viene aggiunto.
-Non cancellare o sostituire nessun altro file, non eseguire SQL.
-Questa modifica elimina i simboli decorativi anche dai testi generati dagli script, e giustifica la prosa editoriale su schermi larghi. Su mobile resta allineata a sinistra per leggibilita'.
-Non modifica prodotti, capitoli, immagini, prezzi, database e carrello.
+Carica su GitHub nella radice del repository i 3 file: index.html, public.js, editorial-v8-9.js.
+Il carrello collega i prodotti per ID Supabase (non per nome tradotto), mantiene la selezione nel browser, rispetta la disponibilita e cambia lingua IT/EN.
+Non attiva ordini, pagamenti, spedizioni o checkout. Nessuna modifica SQL.
