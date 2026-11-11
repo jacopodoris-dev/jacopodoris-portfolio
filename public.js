@@ -1,7 +1,7 @@
 (()=>{
   const stack=document.getElementById('photoStack');
   const toggle=document.getElementById('stackToggle');
-  const setStack=on=>{stack?.classList.toggle('collected',on);if(toggle)toggle.textContent=on?'SEPARA LE PAGINE ↗':'RACCOGLI LE PAGINE ↗'};
+  const setStack=on=>{stack?.classList.toggle('collected',on);if(toggle)toggle.textContent=on?'SEPARA LE PAGINE ':'RACCOGLI LE PAGINE '};
   let manually=false;
   stack?.addEventListener('mouseenter',()=>{if(!manually)setStack(true)});
   stack?.addEventListener('mouseleave',()=>{if(!manually)setStack(false)});

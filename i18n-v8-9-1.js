@@ -8,7 +8,7 @@
   '.opening .opening-copy > .eyebrow':['A VISUAL PRACTICE / MILANO','A VISUAL PRACTICE / MILAN'],
   '.opening h1':['Rallenta<span class="period">.</span>','Slow down<span class="period">.</span>'],
   '.opening-bottom p':['Una visione non si consuma.<br/>Si attraversa.','A vision is not consumed.<br/>It is experienced.'],
-  '.opening-bottom a':['ENTRA NEL LIBRO <span>↓</span>','ENTER THE BOOK <span>↓</span>'],
+  '.opening-bottom a':['ENTRA NEL LIBRO <span></span>','ENTER THE BOOK <span></span>'],
   '.tiny-label span:first-child':['INDEX / 2026','INDEX / 2026'],
   '.tiny-label span:last-child':['ART DIRECTION — VISUAL RESEARCH','ART DIRECTION — VISUAL RESEARCH'],
   '.intro-layout .eyebrow':['01 / EDITORIAL PRACTICE','01 / EDITORIAL PRACTICE'],
@@ -22,7 +22,7 @@
   '.essay small':['TESTO EDITORIALE DI PROPOSTA — DA APPROVARE CON JACOPO','PROPOSED EDITORIAL TEXT — SUBJECT TO JACOPO’S APPROVAL'],
   '.short-quote':['«La materia non contiene soltanto la luce. La interpreta.»','“Matter does not merely contain light. It interprets it.”'],
   '.next-chapter .eyebrow':['CONTINUA A ESPLORARE','CONTINUE EXPLORING'],
-  '.next-chapter a':['02 — Stories &amp; Notes <span>↗</span>','02 — Stories &amp; Notes <span>↗</span>'],
+  '.next-chapter a':['02 — Stories &amp; Notes <span></span>','02 — Stories &amp; Notes <span></span>'],
   '.film-head h2':['La forma<br/>in movimento.','Form<br/>in motion.'],
   '.film-head p':['Il movimento come estensione della ricerca fotografica. Una sequenza breve, contemplativa, capace di trasformare un singolo dettaglio in un tempo da abitare.','Motion as an extension of photographic research. A brief, contemplative sequence that transforms a single detail into a moment to inhabit.'],
   '.film-caption span:last-child':['VIDEO DI STUDIO — NON PROGETTO DEFINITIVO','STUDY FILM — NOT A FINAL PROJECT'],
@@ -39,8 +39,8 @@
   '.edition-heading p':['Serie limitate, oggetti e superfici che diventano espressioni di un linguaggio visivo.','Limited editions, objects and surfaces as expressions of a visual language.'],
   '.about-grid > div h2':['Jacopo Doris.','Jacopo Doris.'],
   '.about-grid > div p':['Art director e visual designer con base a Milano. Il suo lavoro indaga il rapporto fra identità, forma e racconto attraverso immagini, sistemi editoriali e direzione visiva.','Milan-based art director and visual designer. His practice explores the relationship between identity, form and narrative through imagery, editorial systems and visual direction.'],
-  '.about-grid .text-link':['INIZIA UNA CONVERSAZIONE <span>↗</span>','START A CONVERSATION <span>↗</span>'],
-  '.nav-studio':['JD STUDIO <span aria-hidden="true">↗</span>','JD STUDIO <span aria-hidden="true">↗</span>'],
+  '.about-grid .text-link':['INIZIA UNA CONVERSAZIONE <span></span>','START A CONVERSATION <span></span>'],
+  '.nav-studio':['JD STUDIO <span aria-hidden="true"></span>','JD STUDIO <span aria-hidden="true"></span>'],
   '.film-head .eyebrow':['MOVING IMAGE / 001','MOVING IMAGE / 001']
  };
  const navs=[['WORKS','WORK'],['STORIES','STORIES'],['EDITIONS','EDITIONS'],['ABOUT','ABOUT']];
@@ -51,11 +51,11 @@
      const next=pair[lang==='en'?1:0];if(node.dataset.jdTranslated!==lang){node.innerHTML=next;node.dataset.jdTranslated=lang;}
    }
    document.querySelectorAll('.site-nav nav a').forEach((n,i)=>{if(navs[i])n.textContent=navs[i][lang==='en'?1:0]});
-   const st=document.querySelector('#stackToggle');if(st)st.textContent=st.textContent.includes('SEPARA')||st.textContent.includes('SEPARATE')?(lang==='en'?'SEPARATE THE PAGES ↗':'SEPARA LE PAGINE ↗'):(lang==='en'?'GATHER THE PAGES ↗':'RACCOGLI LE PAGINE ↗');
+   const st=document.querySelector('#stackToggle');if(st)st.textContent=st.textContent.includes('SEPARA')||st.textContent.includes('SEPARATE')?(lang==='en'?'SEPARATE THE PAGES ':'SEPARA LE PAGINE '):(lang==='en'?'GATHER THE PAGES ':'RACCOGLI LE PAGINE ');
    const meter=document.querySelector('#liveStatus');if(meter){const m=meter.textContent.match(/^(\d+) (?:capitolo pubblicato|capitoli pubblicati|published chapters?)/);if(m)meter.textContent=lang==='en'?`${m[1]} published ${m[1]==='1'?'chapter':'chapters'} in the book.`:`${m[1]} ${m[1]==='1'?'capitolo pubblicato':'capitoli pubblicati'} nel libro.`}
    document.querySelectorAll('.published-card > .eyebrow').forEach(n=>n.textContent=lang==='en'?'FROM THE EDITORIAL ARCHIVE':'DALL’ARCHIVIO EDITORIALE');
    document.querySelectorAll('.jd-cart-top').forEach(n=>{const count=n.textContent.match(/\d+/)?.[0]||'0';n.textContent=(lang==='en'?'CART / ':'CARRELLO / ')+count});
-   const labels={'Il tuo carrello.':'Your selection.','Chiudi ×':'Close ×','Totale provvisorio':'Estimated total','Acquisto non ancora attivo':'Checkout not yet available','Nessuna creazione selezionata.':'No pieces selected.','Rimuovi':'Remove','Aggiungi al carrello ↗':'Add to selection ↗','Selezione dimostrativa. Prezzi e disponibilità sono indicativi fino alla verifica del catalogo. Nessun ordine viene inviato e nessun pagamento viene addebitato.':'Demonstration cart only. Prices and availability are indicative until catalog verification. No order is placed and no payment is charged.'};
+   const labels={'Il tuo carrello.':'Your selection.','Chiudi ×':'Close ×','Totale provvisorio':'Estimated total','Acquisto non ancora attivo':'Checkout not yet available','Nessuna creazione selezionata.':'No pieces selected.','Rimuovi':'Remove','Aggiungi al carrello ':'Add to selection ','Selezione dimostrativa. Prezzi e disponibilità sono indicativi fino alla verifica del catalogo. Nessun ordine viene inviato e nessun pagamento viene addebitato.':'Demonstration cart only. Prices and availability are indicative until catalog verification. No order is placed and no payment is charged.'};
    for(const n of document.querySelectorAll('.jd-cart-drawer button,.jd-cart-drawer h2,.jd-cart-drawer .jd-cart-note,.jd-cart-drawer .jd-cart-total span,.jd-cart-list p,.jd-cart-trigger')){
      const original=cache.get(n)||Object.keys(labels).find(k=>n.textContent.trim()===k)||Object.keys(labels).find(k=>n.textContent.trim()===labels[k]);
      if(!original)continue;cache.set(n,original);const next=lang==='en'?labels[original]:original;if(n.textContent!==next)n.textContent=next;

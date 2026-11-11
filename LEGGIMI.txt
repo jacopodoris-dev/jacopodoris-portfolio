@@ -1,4 +1,13 @@
-Jacopo Doris V8.8.2 — correzione visualizzazione testi e immagini.
-Carica SOLO public.js nella radice del repository GitHub jacopodoris-portfolio, sostituendo quello precedente. Non caricare LEGGIMI.txt.
-Dopo deploy Netlify, aggiorna la pagina con Ctrl+F5.
-Non cambia database, Studio o dominio jacopodoris.com.
+JD / V8.9.4 — testi puliti e impaginazione giustificata
+
+Carica su GitHub nella radice del repository TUTTI i 5 file:
+index.html
+i18n-v8-9-1.js
+public.js
+editorial-v8-9.js
+jd-editorial-clean-v8-9-4.css
+
+I primi quattro SOSTITUISCONO gli omonimi, il CSS viene aggiunto.
+Non cancellare o sostituire nessun altro file, non eseguire SQL.
+Questa modifica elimina i simboli decorativi anche dai testi generati dagli script, e giustifica la prosa editoriale su schermi larghi. Su mobile resta allineata a sinistra per leggibilita'.
+Non modifica prodotti, capitoli, immagini, prezzi, database e carrello.

@@ -1,0 +1,36 @@
+/* JD V8.9.4 — typography & quiet interface. Loaded last. */
+/* Editorial prose: justified within readable columns. Headings, navigation and controls stay aligned normally. */
+.book-intro p,
+.chapter-intro p,
+.film-section p,
+.stories-section p,
+.live-section .section-header p,
+.live-section .published-card > p,
+.live-section .public-block p,
+.live-section .public-block blockquote,
+.editions-section .edition-heading p,
+.editions-section .edition-product p,
+.about-section p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}
+/* Use full available editorial width; avoid very thin strips of product copy. */
+.live-section .public-block p { max-width: 68ch; }
+.editions-section .edition-product p { max-width: 68ch; }
+/* On narrow screens justified text can produce large gaps. Keep mobile prose legible. */
+@media(max-width: 650px) {
+  .book-intro p,
+  .chapter-intro p,
+  .film-section p,
+  .stories-section p,
+  .live-section .section-header p,
+  .live-section .published-card > p,
+  .live-section .public-block p,
+  .live-section .public-block blockquote,
+  .editions-section .edition-heading p,
+  .editions-section .edition-product p,
+  .about-section p { text-align:left; }
+}
