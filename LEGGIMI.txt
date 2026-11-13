@@ -1,5 +1,24 @@
-JACOPO DORIS / V8.9.5 - CARRELLO
+JACOPO DORIS — V8.9.12 / GALLERIA EDITIONS
 
-Carica su GitHub nella radice del repository i 3 file: index.html, public.js, editorial-v8-9.js.
-Il carrello collega i prodotti per ID Supabase (non per nome tradotto), mantiene la selezione nel browser, rispetta la disponibilita e cambia lingua IT/EN.
-Non attiva ordini, pagamenti, spedizioni o checkout. Nessuna modifica SQL.
+1) SUPABASE → SQL Editor: esegui migrazione-v8-9-12.sql UNA VOLTA.
+   Aggiunge gallery_images (jsonb) a jd_products senza cancellare dati.
+
+2) GITHUB → repository jacopodoris-dev/jacopodoris-portfolio
+   Carica nella CARTELLA PRINCIPALE (root) SOLO questi 3 file:
+    - site-config.js  [sostituisce quello esistente]
+    - jd-editions-gallery-v8-9-12.js  [nuovo]
+    - jd-editions-photo-editor-v8-9-12.js  [nuovo]
+   Non caricare LEGGIMI.txt e il file .sql: quest'ultimo va eseguito su Supabase.
+   Commit changes e attendi il deploy Netlify.
+
+3) JD Studio → Editions → 'Galleria fotografica prodotto'
+   Seleziona borsa; vedrai la copertina. Carica fino a 5 altre foto.
+   Puoi rimuovere e spostare le foto supplementari; la copertina resta quella originale.
+
+4) SITO PUBBLICO DI PROVA → Editions
+   Le schede prodotto hanno righe prezzo/pulsanti allineati.
+   Clicca sulla foto o 'Fotografie e dettagli': si apre la galleria fino a 6 immagini.
+
+Note: Stripe, carrello, JD Studio IT/EN e Supabase RLS non vengono modificati.
+      Non inserire mai chiavi Stripe in GitHub.
+      Da collaudare sul sito di prova prima di passare a jacopodoris.com.
