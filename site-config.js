@@ -10,6 +10,7 @@ window.JD_BUCKET='jd-public-media';
       scripts.push('jd-mobile-nav-v8-9-11.js');
       scripts.push('jd-editions-gallery-v8-9-12.js');
       scripts.push('jd-brand-v8-9-13.js');
+      scripts.push('jd-intro-v8-9-15.js');
     }
     if(document.getElementById('editions')&&document.getElementById('dashboard')){
       scripts.push('jd-editions-photo-editor-v8-9-12.js');
@@ -21,7 +22,7 @@ window.JD_BUCKET='jd-public-media';
       const footer=document.querySelector('footer');
       for(const child of footer?.children||[]){
         if(/V8\.9\.\d+/.test(child.textContent||'')){
-          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.14');break;
+          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.15');break;
         }
       }
     }
