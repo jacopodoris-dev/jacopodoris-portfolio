@@ -21,7 +21,7 @@ window.JD_BUCKET='jd-public-media';
       const footer=document.querySelector('footer');
       for(const child of footer?.children||[]){
         if(/V8\.9\.\d+/.test(child.textContent||'')){
-          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.21');break;
+          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.22');break;
         }
       }
     }

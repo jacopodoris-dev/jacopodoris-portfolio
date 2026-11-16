@@ -1,13 +1,5 @@
-JACOPO DORIS — V8.9.21
-
-Caricare nella cartella principale del repository GitHub tutti e 4 i file:
-index.html
-site-config.js
-jd-rallenta-v8-9-21.css
-jd-rallenta-v8-9-21.js
-
-NON cancellare gli altri file del sito. Il vecchio modulo V8.9.18 può rimanere, ma non è più richiamato.
-Dopo il commit, aprire la preview Netlify e ricaricare forzatamente.
-RALLENTA rimane nel markup originale per evitare il lampo della prima immagine.
-Le frasi si illuminano una alla volta (a sinistra/destra); su smartphone si mostrano sotto l'orologio.
-Animazione disattivata in caso di preferenza di movimento ridotto.
+JACOPO DORIS V8.9.22 — 12 posizioni ora esatte.
+Caricare: index.html, site-config.js, jd-rallenta-v8-9-22.css, jd-rallenta-v8-9-22.js.
+Non eliminare i moduli delle versioni precedenti: non saranno più richiamati.
+La prima foto resta sotto Rallenta (markup HTML iniziale).
+RALLENTA rimane sotto il quadrante; la frase Sospendi il giudizio è ora quella delle ore 12.
