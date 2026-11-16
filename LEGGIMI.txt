@@ -1,9 +1,13 @@
-JACOPO DORIS V8.9.18 — RALLENTA SENZA LAMPO
+JACOPO DORIS — V8.9.21
 
-Carica nella radice del repository GitHub questi 4 file: index.html, site-config.js, jd-rallenta-v8-9-18.css, jd-rallenta-v8-9-18.js. Non eliminare gli altri file.
+Caricare nella cartella principale del repository GitHub tutti e 4 i file:
+index.html
+site-config.js
+jd-rallenta-v8-9-21.css
+jd-rallenta-v8-9-21.js
 
-Rallenta è inserito direttamente nel codice HTML tra menu e prima immagine; CSS è caricato nel <head> prima della visualizzazione. Il vecchio JS dell’introduzione non viene più caricato.
-
-La scritta RALLENTA si compone lettera per lettera, rallentando; la sottoscritta appare per ultima. Nessun passaggio automatico e nessuna istruzione per ruotare.
-
-Verifica: apri l’anteprima Netlify in una finestra privata e ricarica più volte.
+NON cancellare gli altri file del sito. Il vecchio modulo V8.9.18 può rimanere, ma non è più richiamato.
+Dopo il commit, aprire la preview Netlify e ricaricare forzatamente.
+RALLENTA rimane nel markup originale per evitare il lampo della prima immagine.
+Le frasi si illuminano una alla volta (a sinistra/destra); su smartphone si mostrano sotto l'orologio.
+Animazione disattivata in caso di preferenza di movimento ridotto.
