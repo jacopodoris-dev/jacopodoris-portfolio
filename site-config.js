@@ -15,21 +15,16 @@ window.JD_BUCKET='jd-public-media';
       scripts.push('jd-editions-photo-editor-v8-9-12.js');
     }
     for(const src of scripts){
-      const s=document.createElement('script');
-      s.src=src;
-      s.defer=true;
-      document.head.appendChild(s);
+      const s=document.createElement('script');s.src=src;s.defer=true;document.head.appendChild(s);
     }
     if(document.getElementById('publishedChapters')){
       const footer=document.querySelector('footer');
       for(const child of footer?.children||[]){
         if(/V8\.9\.\d+/.test(child.textContent||'')){
-          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.13');
-          break;
+          child.textContent=child.textContent.replace(/V8\.9\.\d+/,'V8.9.14');break;
         }
       }
     }
   };
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',launch,{once:true});
-  else launch();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',launch,{once:true});else launch();
 })();
