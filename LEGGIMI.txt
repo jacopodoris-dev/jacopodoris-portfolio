@@ -1,24 +1,9 @@
-JACOPO DORIS — V8.9.12 / GALLERIA EDITIONS
+JACOPO DORIS V8.9.18 — RALLENTA SENZA LAMPO
 
-1) SUPABASE → SQL Editor: esegui migrazione-v8-9-12.sql UNA VOLTA.
-   Aggiunge gallery_images (jsonb) a jd_products senza cancellare dati.
+Carica nella radice del repository GitHub questi 4 file: index.html, site-config.js, jd-rallenta-v8-9-18.css, jd-rallenta-v8-9-18.js. Non eliminare gli altri file.
 
-2) GITHUB → repository jacopodoris-dev/jacopodoris-portfolio
-   Carica nella CARTELLA PRINCIPALE (root) SOLO questi 3 file:
-    - site-config.js  [sostituisce quello esistente]
-    - jd-editions-gallery-v8-9-12.js  [nuovo]
-    - jd-editions-photo-editor-v8-9-12.js  [nuovo]
-   Non caricare LEGGIMI.txt e il file .sql: quest'ultimo va eseguito su Supabase.
-   Commit changes e attendi il deploy Netlify.
+Rallenta è inserito direttamente nel codice HTML tra menu e prima immagine; CSS è caricato nel <head> prima della visualizzazione. Il vecchio JS dell’introduzione non viene più caricato.
 
-3) JD Studio → Editions → 'Galleria fotografica prodotto'
-   Seleziona borsa; vedrai la copertina. Carica fino a 5 altre foto.
-   Puoi rimuovere e spostare le foto supplementari; la copertina resta quella originale.
+La scritta RALLENTA si compone lettera per lettera, rallentando; la sottoscritta appare per ultima. Nessun passaggio automatico e nessuna istruzione per ruotare.
 
-4) SITO PUBBLICO DI PROVA → Editions
-   Le schede prodotto hanno righe prezzo/pulsanti allineati.
-   Clicca sulla foto o 'Fotografie e dettagli': si apre la galleria fino a 6 immagini.
-
-Note: Stripe, carrello, JD Studio IT/EN e Supabase RLS non vengono modificati.
-      Non inserire mai chiavi Stripe in GitHub.
-      Da collaudare sul sito di prova prima di passare a jacopodoris.com.
+Verifica: apri l’anteprima Netlify in una finestra privata e ricarica più volte.

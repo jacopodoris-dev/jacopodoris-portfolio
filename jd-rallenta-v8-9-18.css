@@ -1,0 +1,84 @@
+/* Jacopo Doris V8.9.18 — Rallenta is in the initial HTML, not injected after load. */
+.jd-rallenta18 {
+  --jr18-ink:#272621;
+  --jr18-copper:#a97754;
+  position:relative;
+  isolation:isolate;
+  min-height:calc(100svh - 82px);
+  width:100%;
+  padding:clamp(36px,5vh,70px) 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.28) 0,rgba(255,255,255,0) 35%),linear-gradient(180deg,#efede7,#e8e4dc);
+  color:var(--jr18-ink);
+}
+.jd-rallenta18, .jd-rallenta18 * {box-sizing:border-box}
+.jd-rallenta18 .jr18-content {width:min(100%,760px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:clamp(27px,5vh,44px)}
+.jd-rallenta18 .jr18-dial {
+  width:min(44vh,64vw,400px);
+  aspect-ratio:1;
+  position:relative;
+  border-radius:50%;
+  touch-action:none;
+  cursor:grab;
+  opacity:0;
+  transform:scale(.97);
+  animation:jr18-dial-appear 1.8s cubic-bezier(.2,.7,.2,1) .12s forwards;
+  background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.16),rgba(255,255,255,.02) 60%,transparent);
+}
+.jd-rallenta18 .jr18-dial:active{cursor:grabbing}
+.jd-rallenta18 .jr18-dial:focus-visible{outline:1px solid rgba(39,38,33,.35);outline-offset:9px}
+.jd-rallenta18 .jr18-ring{position:absolute;border:1px solid rgba(44,42,37,.12);border-radius:50%;pointer-events:none}
+.jd-rallenta18 .jr18-ring-outer{inset:0}
+.jd-rallenta18 .jr18-ring-inner{inset:12%;border-color:rgba(44,42,37,.075)}
+.jd-rallenta18 .jr18-hand{
+  position:absolute;left:50%;top:50%;width:1.5px;height:35%;
+  border-radius:2px;transform-origin:50% 100%;
+  transform:translate(-50%,-100%) rotate(26deg);
+  background:linear-gradient(to top,rgba(169,119,84,.85),#a97754);
+  pointer-events:none;will-change:transform;
+}
+.jd-rallenta18 .jr18-hub{position:absolute;left:50%;top:50%;width:6px;height:6px;background:rgba(169,119,84,.9);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.jd-rallenta18 .jr18-copy{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.5vh,24px)}
+.jd-rallenta18 .jr18-word{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:clamp(28px,4vw,52px);
+  letter-spacing:.20em;
+  padding-left:.20em;
+  line-height:1.15;
+  font-weight:300;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.jd-rallenta18 .jr18-letter{
+  display:inline-block;
+  opacity:0;
+  filter:blur(5px);
+  transform:translateY(9px);
+  animation:jr18-letter-arrive 1.15s cubic-bezier(.2,.7,.2,1) var(--arrival) forwards;
+}
+.jd-rallenta18 .jr18-subline{
+  margin:0;
+  font:italic 300 clamp(13px,1.2vw,16px)/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  letter-spacing:.075em;text-align:center;color:#706d67;
+  opacity:0;transform:translateY(7px);
+  animation:jr18-subline-arrive 1.5s ease 7.45s forwards;
+}
+@keyframes jr18-dial-appear{to{opacity:1;transform:scale(1)}}
+@keyframes jr18-letter-arrive{to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@keyframes jr18-subline-arrive{to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){
+  .jd-rallenta18{min-height:calc(100svh - 70px)}
+  .jd-rallenta18 .jr18-dial{width:min(63vw,38vh,330px)}
+  .jd-rallenta18 .jr18-word{font-size:clamp(26px,7.6vw,38px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .jd-rallenta18 .jr18-dial,.jd-rallenta18 .jr18-letter,.jd-rallenta18 .jr18-subline{
+    animation:none!important;opacity:1;transform:none;filter:none;
+  }
+}
